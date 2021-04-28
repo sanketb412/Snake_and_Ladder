@@ -25,22 +25,24 @@ public class Snake_ladder {
 		
 		switch (IntValue2)
 		{
-      	case Ladder: 
-      		System.out.println("player move ahead through ladder");
-      		position += IntValue1; break;
-      	case Snake:
-      		System.out.println("player move behind through snake");
-      		position -= IntValue1; 
-      			if (position <=1 )
-      				position = 0; break;
-      	default:
-      		if (position <= 0)
+      		case Ladder: 
+      			System.out.println("player move ahead through ladder");
+      			position += IntValue1;
+      			System.out.println("Now you are at  " +position);
       			break;
-      		System.out.println("player doesnt move"); break;
-        }
+      		case Snake:
+      			if (position <=1 )
+      				System.out.println("player stays at 0");
+      			else
+      				System.out.println("player move behind through snake");
+      				position -= IntValue1;
+      			break;
+      		default:
+      			if (position <= 0)
+      				position = 0;
+      			System.out.println("player doesnt move"); break;     			
+		}	
 		
-		
-		System.out.println("now you are at  " +position);
 		}
 	}
 
