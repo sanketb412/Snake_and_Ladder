@@ -10,7 +10,7 @@ public class Snake_ladder {
 			
 		System.out.println("\nYou are at a position '0' "); 		
 		int position = 0;
-		while (position <= 100)
+		while (position < 100)
 		{
 			double empCheck1 = (Math.floor((Math.random() * 10 ) % 6) + 1);
 			int IntValue1 = (int) Math.round(empCheck1);
@@ -24,13 +24,18 @@ public class Snake_ladder {
 		
 			switch (IntValue2)
 			{
-      			case Ladder: 
+      			case Ladder:
       				System.out.println("player move ahead through ladder");
-      				position = +position + IntValue1;    					
+      				position = +position + IntValue1;
+      				if (+position > 100)
+      				{
+      					System.out.println("Roll again");
+      				}
+      				else {
       				System.out.println("Now you are at  " +position);
-      				break;
+      				break;}
       			case Snake:
-      				if (+position <= 0) {
+      				if (+position == 0) {
       					System.out.println("Player stays at 0"); }
       				else {
       					if (+position > 6) {
