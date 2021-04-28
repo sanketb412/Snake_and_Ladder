@@ -26,7 +26,7 @@ public class Snake_ladder {
 			{
       			case Ladder: 
       				System.out.println("player move ahead through ladder");
-      				position = +position + IntValue1;
+      				position = +position + IntValue1;    					
       				System.out.println("Now you are at  " +position);
       				break;
       			case Snake:
