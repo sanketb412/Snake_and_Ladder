@@ -10,8 +10,11 @@ public class Snake_ladder {
 			
 		System.out.println("\nYou are at a position '0' "); 		
 		int position = 0;
+		int countd = 0;
+		int countp = 0;
 		while (position < 100)
 		{
+			countd++;
 			double empCheck1 = (Math.floor((Math.random() * 10 ) % 6) + 1);
 			int IntValue1 = (int) Math.round(empCheck1);
 			System.out.println("\nYou Roll: " +IntValue1);
@@ -27,21 +30,29 @@ public class Snake_ladder {
       			case Ladder:
       				System.out.println("player move ahead through ladder");
       				position = +position + IntValue1;
+      				countp++;
       				if (+position > 100)
       				{
       					System.out.println("Roll again");
       				}
-      				else {
-      				System.out.println("Now you are at  " +position);
-      				break;}
+      				else
+      				{
+      					System.out.println("Now you are at  " +position);
+      					break;
+      				}
       			case Snake:
-      				if (+position == 0) {
-      					System.out.println("Player stays at 0"); }
-      				else {
-      					if (+position > 6) {
+      				if (+position == 0) 
+      				{
+      					System.out.println("Player stays at 0"); 
+      				}
+      				else
+      				{
+      					if (+position > 6) 
+      					{
       						position -= IntValue1;
       						System.out.println("Player move behind through snake");
       						System.out.println("Now you are at " +position);
+      						countp++;
       					}
       				}
       				break;
@@ -49,7 +60,9 @@ public class Snake_ladder {
       				if (position <= 0)
       					position = 0;
       					System.out.println("player doesnt move"); break;     			
-			}		
+			}
+			System.out.println("\nThe Position changed for " +countp +" times");
 		}
+		System.out.println("\nThe dice was played for " +countd +" times");
 	}
 }
