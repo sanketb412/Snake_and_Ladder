@@ -11,7 +11,7 @@ public class Snake_ladder {
 		
 		
 			
-		System.out.println("\nYou are at a position '0' "); 		
+		System.out.println("\nBoth the Players are at a position '0' "); 		
 		int position1 = 0;
 		int position2 = 0;
 		
