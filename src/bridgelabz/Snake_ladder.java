@@ -20,7 +20,7 @@ public class Snake_ladder {
 			int dice1 = (int) Math.floor(Math.random() * 10) % 6 + 1;
 			System.out.println("\nPlayer1 Roll: " +dice1);
 		
-			int dieCheck1 = (int) Math.floor(Math.random() * 100) % 3;
+			int dieCheck1 = (int) Math.floor(Math.random() * 10) % 3;
 		
 			switch (dieCheck1)
 			{
