@@ -1,9 +1,6 @@
 package bridgelabz;
 
 public class Snake_ladder {
-
-	public static final int IS_LADDER = 1;
-	public static final int IS_SNAKE = 2;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -24,7 +21,7 @@ public class Snake_ladder {
 		
 			switch (dieCheck1)
 			{
-      			case IS_LADDER:
+      			case 1:
       					position1 = position1 + dice1;
  			           if (+position1 > 100)
  			           {
@@ -37,7 +34,7 @@ public class Snake_ladder {
  			        	  System.out.println("Now Player1 is at " +position1);
  			           }
       					break;
-      			case IS_SNAKE:
+      			case 2:
       				if (+position1 == 0) 
       				{
       					System.out.println("Player1 stays at 0"); 
@@ -64,7 +61,7 @@ public class Snake_ladder {
 			
 			switch (dieCheck2)
 			{
-      			case IS_LADDER:
+      			case 1:
       				position2 = position2 + dice2;
 			           if (+position2 > 100)
 			           {
@@ -77,7 +74,7 @@ public class Snake_ladder {
  			        	   System.out.println("Now Player2 is at " +position2);
  			           }
  			           break;
-      			case IS_SNAKE:
+      			case 2:
       				if (+position2 == 0) 
       				{
       					System.out.println("Player2 stays at 0"); 
