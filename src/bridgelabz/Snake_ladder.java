@@ -4,9 +4,7 @@ public class Snake_ladder {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("#####  Welcome to Snake and Ladder Game  #####");
-		
-		
+		System.out.println("#####  Welcome to Snake and Ladder Game  #####");		
 			
 		System.out.println("\nBoth the Players are at a position '0' "); 		
 		int position1 = 0;
